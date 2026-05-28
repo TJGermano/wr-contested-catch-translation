@@ -135,6 +135,30 @@ Future iterations could incorporate these variables to better understand *when* 
 
 Additionally, contested catch charting is dependent on PFF definitions and tracking methodology.
 
+## Limitations
+
+This project is exploratory in nature and should not be interpreted as a definitive evaluation model.
+
+The final filtered sample size for many analyses was relatively small due to:
+- limited contested target volume
+- players not yet reaching the NFL
+- threshold filtering to remove noisy observations
+- limited NFL sample years
+
+As a result, many visualizations included roughly 50–70 qualifying receivers depending on the filters applied.
+
+Contested catch data is inherently sparse.
+
+Many receivers accumulate relatively few contested targets across a season, making contested catch efficiency highly sensitive to small-sample variation.
+
+Additionally, this study intentionally isolated contested catch metrics only and did not control for:
+- separation ability
+- offensive structure
+- quarterback play
+- target quality
+- route tree
+- draft capital
+- athletic profile
 ---
 
 ## Future Work
