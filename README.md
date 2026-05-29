@@ -63,7 +63,7 @@ Workflow:
 
 ## CCR Translation Analysis
 
-![CCR Translation](charts/ccr_portfolio.png)
+Charts/College V NFL CCR (1).png
 
 ### Finding
 
