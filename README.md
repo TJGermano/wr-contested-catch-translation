@@ -88,6 +88,8 @@ Receivers who posted strong contested catch efficiency in college did not consis
 
 This suggests contested catch efficiency alone may not be a strongly translatable standalone trait when projecting wide receiver performance across levels.
 
+![CCR Translation](Charts/College V NFL CCR (1).png)
+
 ---
 
 ### Finding 2: Contested Target Roles Show Weak Persistence
@@ -99,6 +101,8 @@ After normalizing for career length on a per-season basis, contested target usag
 Receivers who were frequently used in contested situations in college were somewhat more likely to continue occupying similar roles in the NFL.
 
 While the relationship is modest, it was noticeably stronger than the relationship observed for contested catch efficiency.
+
+![CT Per Season Translation](Charts/college_vs_nfl_ct_per_season.png)
 
 ---
 
