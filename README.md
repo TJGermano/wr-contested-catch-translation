@@ -88,7 +88,7 @@ Receivers who posted strong contested catch efficiency in college did not consis
 
 This suggests contested catch efficiency alone may not be a strongly translatable standalone trait when projecting wide receiver performance across levels.
 
-![CCR Translation](Charts/College V NFL CCR (1).png)
+![CCR Translation](Charts/College%20V%20NFL%20CCR%20(1).png)
 
 ---
 
