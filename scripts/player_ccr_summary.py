@@ -40,6 +40,11 @@ college_summary.loc[
     "college_cc_rate_weighted"
 ] = None
 
+college_summary["college_ct_per_season"] = (
+    college_summary["college_contested_targets"]
+    / college_summary["college_seasons"]
+)
+
 # --------------------
 # NFL player summary
 # --------------------
@@ -69,6 +74,11 @@ nfl_summary.loc[
     "nfl_cc_rate_weighted"
 ] = None
 
+nfl_summary["nfl_ct_per_season"] = (
+    nfl_summary["nfl_contested_targets"]
+    / nfl_summary["nfl_seasons"]
+)
+
 # --------------------
 # Join summaries
 # --------------------
@@ -97,6 +107,7 @@ summary = summary[
         "college_contested_targets",
         "college_contested_receptions",
         "college_cc_rate_weighted",
+        "college_ct_per_season",
         "nfl_seasons",
         "first_nfl_season",
         "last_nfl_season",
@@ -107,6 +118,7 @@ summary = summary[
         "nfl_contested_targets",
         "nfl_contested_receptions",
         "nfl_cc_rate_weighted",
+        "nfl_ct_per_season",
     ]
 ]
 
