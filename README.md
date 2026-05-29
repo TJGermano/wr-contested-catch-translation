@@ -1,37 +1,24 @@
-# wr-contested-catch-translation
-Exploratory football analytics study analyzing whether contested catch ability translates from college football to the NFL using PFF charting data.
 # WR Contested Catch Translation Study
 
 ## Overview
 
-This project explores whether contested catch ability translates from college football to the NFL.
+This project explores whether contested catch ability translates from college football to the NFL using PFF charting data and player-level receiving metrics.
 
-Using PFF receiving data from 2021–2025, the study analyzes:
+The study was motivated by a common scouting belief that receivers who consistently win in contested situations in college should continue to demonstrate similar success at the NFL level.
 
-* Contested Catch Rate (CCR)
-* Contested Target Volume
-* Player-level contested usage
-* Season-level contested usage
-* College-to-NFL metric persistence
-
-The original hypothesis was that wide receivers with strong contested catch production in college would continue to demonstrate similar contested catch success in the NFL.
-
-Initial findings showed limited direct relationship between:
-
-* College CCR and NFL CCR
-* College contested target volume and NFL contested target volume
-
-The results suggest contested environments may be significantly more context-dependent than commonly assumed.
+Using player-level data from college and NFL receiving datasets, this project examines whether contested catch efficiency persists across levels and whether contested catch metrics provide meaningful predictive value when evaluated in isolation.
 
 ---
 
-## Key Questions
+## Research Question
 
-This project attempted to answer:
+Does contested catch ability translate from college football to the NFL?
+
+More specifically:
 
 1. Does contested catch efficiency persist from college to the NFL?
-2. Do receivers who operate in high contested-target environments in college continue to occupy those roles in the NFL?
-3. Is high contested catch usage potentially more reflective of separation limitations than a translatable standalone skill?
+2. Is contested catch rate a translatable standalone receiver trait?
+3. Can contested catch production be used as a meaningful projection tool without additional contextual variables?
 
 ---
 
@@ -44,11 +31,12 @@ Data was sourced from PFF charting data and includes:
 
 Metrics used:
 
-* Contested targets
-* Contested receptions
-* Contested catch rate
-* Receiving production
-* Season-level and player-level aggregates
+* Contested Targets
+* Contested Receptions
+* Contested Catch Rate (CCR)
+* Receiving Production
+* Season-Level Receiving Statistics
+* Player-Level Aggregated Statistics
 
 ---
 
@@ -65,113 +53,84 @@ Workflow:
 
 1. Raw college and NFL WR data exports
 2. Data cleaning and normalization
-3. Player-level joins using Player ID
-4. Construction of:
-
-   * Long-form translation datasets
-   * Aggregated player summary datasets
-5. Scatter plot analysis
-6. Top-10 leaderboards and exploratory comparisons
+3. Player matching using Player ID
+4. Construction of player-level comparison datasets
+5. Aggregation of contested catch metrics across available seasons
+6. Scatter plot analysis and correlation testing
+7. Top-10 leaderboard comparisons and exploratory analysis
 
 ---
 
-## Key Findings
+## CCR Translation Analysis
 
-### 1. Limited Relationship Between College and NFL CCR
+![CCR Translation](charts/ccr_portfolio.png)
 
-Initial scatter plot analysis showed almost no linear relationship between:
+### Finding
 
-* College contested catch rate
-* NFL contested catch rate
+College contested catch rate showed virtually no relationship to NFL contested catch rate.
 
-Correlation values were near zero, suggesting contested catch efficiency alone may not strongly persist across levels.
+**Correlation: -0.03**
 
----
+Receivers who posted strong contested catch efficiency in college did not consistently demonstrate similar contested catch efficiency in the NFL.
 
-### 2. Limited Relationship Between College and NFL Contested Target Volume
-
-Receivers with extremely high contested target volume in college did not consistently maintain similar contested usage in the NFL.
-
-This may suggest:
-
-* NFL role changes
-* Increased athletic competition
-* Better NFL coverage
-* Greater importance of separation ability
-* Offensive/QB context dependence
+The findings suggest that contested catch rate alone may not be a strongly translatable standalone trait when projecting wide receiver performance across levels.
 
 ---
 
-### 3. Contested Environments May Be Context-Driven
+## Interpretation
 
-The analysis suggests contested catch metrics may reflect:
+One possible explanation is that contested catch production is heavily influenced by contextual factors beyond the receiver's ball skills, including:
 
-* offensive structure
-* quarterback tendencies
-* route profile
-* receiver role
-* inability to consistently separate
+* Offensive structure
+* Quarterback tendencies
+* Route profile
+* Receiver role
+* Defensive competition
+* Separation ability
 
-rather than functioning as a fully isolated translatable WR skill.
+As a result, contested catch rate may reflect surrounding circumstances as much as individual receiver skill.
 
 ---
-
-## Important Caveats
-
-This project intentionally isolated contested catch metrics only.
-
-The analysis does NOT currently include:
-
-* Separation metrics
-* Height/weight
-* Draft capital
-* Alignment data
-* Route tree information
-* QB aggressiveness
-* Target share
-* Man/zone coverage splits
-
-Future iterations could incorporate these variables to better understand *when* contested catch ability translates successfully.
-
-Additionally, contested catch charting is dependent on PFF definitions and tracking methodology.
 
 ## Limitations
 
-This project is exploratory in nature and should not be interpreted as a definitive evaluation model.
+This project is exploratory in nature and should not be interpreted as a definitive player evaluation model.
 
-The final filtered sample size for many analyses was relatively small due to:
-- limited contested target volume
-- players not yet reaching the NFL
-- threshold filtering to remove noisy observations
-- limited NFL sample years
+Several important variables were intentionally excluded:
 
-As a result, many visualizations included roughly 50–70 qualifying receivers depending on the filters applied.
+* Separation metrics
+* Height and weight
+* Draft capital
+* Alignment data
+* Route tree information
+* Quarterback aggressiveness
+* Target quality
+* Target share
+* Coverage tendencies
 
-Contested catch data is inherently sparse.
+Additionally:
 
-Many receivers accumulate relatively few contested targets across a season, making contested catch efficiency highly sensitive to small-sample variation.
+* Contested catch charting is dependent on PFF definitions and methodology.
+* Contested catch opportunities are relatively rare events, creating small-sample volatility.
+* The final filtered sample contained approximately 50–70 qualifying receivers depending on thresholds applied.
 
-Additionally, this study intentionally isolated contested catch metrics only and did not control for:
-- separation ability
-- offensive structure
-- quarterback play
-- target quality
-- route tree
-- draft capital
-- athletic profile
 ---
 
 ## Future Work
 
-Potential future expansions:
+Potential future expansions include:
 
-* Add athletic testing data
-* Add draft capital
-* Compare WR archetypes
-* Incorporate separation metrics
-* Analyze role-based translation
-* Build predictive clustering models
-* Compare contested catch skill vs separation-based efficiency
+* Contested target volume translation
+* Career-length normalization
+* Per-season usage analysis
+* Athletic testing data
+* Draft capital integration
+* Receiver archetype comparisons
+* Separation metrics
+* Role-based translation analysis
+* Predictive clustering models
+
+A current area of investigation is whether contested target volume persists across levels after controlling for differences in career length and available NFL seasons.
 
 ---
 
@@ -182,7 +141,6 @@ data/
 outputs/
 scripts/
 charts/
-portfolio/
 ```
 
 ---
@@ -190,5 +148,7 @@ portfolio/
 ## Author
 
 Thomas Germano
+
 MS Sports Management Candidate — Columbia University
+
 Football Operations & Analytics
